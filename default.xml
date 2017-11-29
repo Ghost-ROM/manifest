@@ -6,16 +6,16 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com" />
-  <remote  name="ghosh"
+  <remote  name="ghost"
            revision="oreo"
-           fetch="git+ssh://git@github.com/GhoshRom" />
+           fetch="git+ssh://git@github.com/GhostRom" />
   <default revision="refs/tags/android-8.0.0_r29"
            remote="aosp"
            sync-c="true"
            sync-j="4" />
 
-<!-- Repos tracked by GhoshRom -->
-  <project path="build/make" name="build" groups="pdk,tradefed" remote="ghosh" >
+<!-- Repos tracked by Ghost-ROM -->
+  <project path="build/make" name="build" groups="pdk,tradefed" remote="ghost" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -24,19 +24,19 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
     </project>
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="ghosh" >
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="ghost" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
-  <project path="manifest" name="manifest" remote="ghosh" />
+  <project path="manifest" name="manifest" remote="ghost" />
 
-  <project path="vendor/ghoshrom" name="vendor_ghoshrom" remote="ghosh" />
+  <project path="vendor/ghostrom" name="vendor_ghostrom" remote="ghost" />
 
-  <!-- GhoshRom Nexus devices -->
+  <!-- GhostRom Nexus devices -->
     <!--angler -->
   <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk,pdk" />
   <project path="kernel/huawei/angler" name="AquariOS/kernel_huawei_angler" remote="github" revision="wip" />
-  <project path="vendor/huawei/angler" name="proprietary_vendor_huawei" remote="ghosh" />
+  <project path="vendor/huawei/angler" name="proprietary_vendor_huawei" remote="ghost" />
 
   <!-- Repos to-be-tracked -->
   <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" />
