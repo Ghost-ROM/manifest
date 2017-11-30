@@ -82,15 +82,15 @@ source ~/.bashrc
 
 8) In the terminal, navigate to where you would like to download the Ghost ROM source code. The commands below will make it in your home folder, but if you have limited space you may want to create it somewhere else. Faster is better, i.e. SSD would be best, USB external (even 3.0) will be comparatively slow. Here we go:
 ```bash
-mkdir ~/ghostrom
-cd ~/ghostrom
+mkdir ~/ghost-rom
+cd ~/ghost-rom
 ```
 
 <br />
 
 9) Now you're going to initialize the repo:
 ```bash
-repo init -u https://github.com/ghostrom/manifest -b oreo
+repo init -u https://github.com/ghost-rom/manifest -b oreo
 ```
 
 <br />

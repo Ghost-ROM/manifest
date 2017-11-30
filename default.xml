@@ -40,8 +40,8 @@
 
   <!-- Ghost ROM Nexus devices -->
     <!--angler -->
-  <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk,pdk" />
-  <project path="kernel/huawei/angler" name="kernel_huawei_angler" remote="ghost" revision="wip" />
+  <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk,pdk" remote="ghost" />
+  <project path="kernel/huawei/angler" name="AquariOS/kernel_huawei_angler" remote="github" revision="wip" />
   <project path="vendor/huawei/angler" name="proprietary_vendor_huawei" remote="ghost" />
 
   <!-- Repos to-be-tracked -->
