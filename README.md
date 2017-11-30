@@ -1,7 +1,7 @@
-# GhoshRom #
+# Ghost ROM #
 
 ## Setting up your build environment ##
-To setup your build environment and sync GhoshRom, please follow the guide below.
+To setup your build environment and sync Ghost ROM, please follow the guide below.
 
 1) If doing a fresh install, skip to step 2. Otherwise, do the following:
 
@@ -80,17 +80,17 @@ source ~/.bashrc
 
 <br />
 
-8) In the terminal, navigate to where you would like to download the GhoshRom source code. The commands below will make it in your home folder, but if you have limited space you may want to create it somewhere else. Faster is better, i.e. SSD would be best, USB external (even 3.0) will be comparatively slow. Here we go:
+8) In the terminal, navigate to where you would like to download the Ghost ROM source code. The commands below will make it in your home folder, but if you have limited space you may want to create it somewhere else. Faster is better, i.e. SSD would be best, USB external (even 3.0) will be comparatively slow. Here we go:
 ```bash
-mkdir ~/ghoshrom
-cd ~/ghoshrom
+mkdir ~/ghostrom
+cd ~/ghostrom
 ```
 
 <br />
 
 9) Now you're going to initialize the repo:
 ```bash
-repo init -u https://github.com/ghoshrom/manifest -b oreo
+repo init -u https://github.com/ghostrom/manifest -b oreo
 ```
 
 <br />

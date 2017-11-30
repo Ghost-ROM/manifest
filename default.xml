@@ -8,13 +8,15 @@
            review="android-review.googlesource.com" />
   <remote  name="ghost"
            revision="oreo"
-           fetch="git+ssh://git@github.com/GhostRom" />
+           fetch="git+ssh://git@github.com/Ghost-Rom" />
   <default revision="refs/tags/android-8.0.0_r29"
            remote="aosp"
            sync-c="true"
            sync-j="4" />
 
 <!-- Repos tracked by Ghost-ROM -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="ghost" />
+  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="ghost" />
   <project path="build/make" name="build" groups="pdk,tradefed" remote="ghost" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -28,40 +30,37 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="ghost" />
   <project path="manifest" name="manifest" remote="ghost" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="ghost" />
+  <project path="system/core" name="system_core" groups="pdk" remote="ghost" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote="ghost" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="ghost" />
+  <project path="vendor/ghost" name="vendor_ghost" remote="ghost" />
 
-  <project path="vendor/ghostrom" name="vendor_ghostrom" remote="ghost" />
-
-  <!-- GhostRom Nexus devices -->
+  <!-- Ghost ROM Nexus devices -->
     <!--angler -->
-  <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk,pdk" />
-  <project path="kernel/huawei/angler" name="AquariOS/kernel_huawei_angler" remote="github" revision="wip" />
+  <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk,pdk" />
+  <project path="kernel/huawei/angler" name="kernel_huawei_angler" remote="ghost" revision="wip" />
   <project path="vendor/huawei/angler" name="proprietary_vendor_huawei" remote="ghost" />
 
   <!-- Repos to-be-tracked -->
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/support" name="platform/frameworks/support" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" groups="pdk-fs" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" groups="pdk-fs" />
   <project path="packages/inputmethods/LatinIME" name="platform/packages/inputmethods/LatinIME" groups="pdk-fs" />
   <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/services/Telecomm" name="platform/packages/services/Telecomm" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/services/Telephony" name="platform/packages/services/Telephony" groups="pdk-cw-fs,pdk-fs" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
-  <project path="system/extras" name="platform/system/extras" groups="pdk" />
-  <project path="system/sepolicy" name="platform/system/sepolicy" groups="pdk" />
   <project path="system/vold" name="platform/system/vold" groups="pdk" />
 
   <!-- AOSP Repo's -->
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
-  <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
   <project path="art" name="platform/art" groups="pdk" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
-  <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs,pdk-fs" />
   <project path="developers/build" name="platform/developers/build" />
